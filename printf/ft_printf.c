@@ -17,13 +17,13 @@ int	what_print(const char str, va_list args, int i)
 	if (str == 'd' || str == 'i')
 		i += ft_putnbr(va_arg(args, int));
 	else if (str == 's')
-		i += ft_putstr(va_arg(args, char*));
+		i += ft_putstr(va_arg(args, char *));
 	else if (str == 'c')
 		i += ft_putchar(va_arg(args, int));
 	else if (str == 'x' || str == 'X')
 		i += ft_puthex(va_arg(args, unsigned int), str);
 	else if (str == 'p')
-		i += ft_putptr(va_arg(args, void*));
+		i += ft_putptr (va_arg(args, void *));
 	else if (str == 'u')
 		i += ft_putnum_un(va_arg(args, unsigned int));
 	else if (str == '%')
@@ -33,16 +33,16 @@ int	what_print(const char str, va_list args, int i)
 
 int	ft_printf(const char *str, ...)
 {
-	va_list	args;
-	int	i;
-	int	a;
+	int		i;
+	int		a;
+	la_list	args;
 
 	i = 0;
 	a = 0;
 	va_start(args, str);
-	while(str[a])
+	while (str[a])
 	{
-		if(str[a] == '%')
+		if (str [a] == '%')
 		{
 			a++;
 			i = what_print(str[a], args, i);
@@ -52,6 +52,5 @@ int	ft_printf(const char *str, ...)
 		a++;
 	}
 	va_end(args);
-	return(i);
+	return (i);
 }
-

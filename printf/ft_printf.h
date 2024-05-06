@@ -17,7 +17,7 @@
 # include <stdarg.h>
 # include <stdio.h>
 # include <unistd.h>
-#include <stddef.h>
+# include <stddef.h>
 
 int	ft_printf(const char *format, ...);
 int	ft_check(const char str, va_list args, int i);
