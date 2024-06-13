@@ -19,6 +19,7 @@
 # include <unistd.h>
 # include <stddef.h>
 
+int	putt(unsigned long n, const char format);
 int	ft_printf(const char *format, ...);
 int	ft_check(const char str, va_list args, int i);
 int	ft_putchar(char c);

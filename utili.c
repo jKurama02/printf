@@ -18,7 +18,7 @@ int	ft_putchar(char c)
 	return (1);
 }
 
-int	t_putnum_un(unsigned int n)
+int	ft_putnum_un(unsigned int n)
 {
 	int	c;
 

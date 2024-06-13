@@ -35,7 +35,7 @@ int	ft_printf(const char *str, ...)
 {
 	int		i;
 	int		a;
-	la_list	args;
+	va_list	args;
 
 	i = 0;
 	a = 0;
